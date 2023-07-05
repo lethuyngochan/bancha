@@ -1,0 +1,169 @@
+.sidebar a {
+    color: rgba(63, 49, 48, 0.5);
+    display: block;
+    padding: 15px 0 10px;
+    border-bottom: 1px solid rgba(63, 49, 48, 0.1);
+    position: relative;
+}
+
+.sidebar {
+    width: 25%;
+    position: sticky;
+    top: 0;
+    border: 2px solid #6B6660;
+    padding: 0 20px;
+}
+
+.sidebar a:last-child {
+    border-bottom: none;
+}
+
+.sidebar a.active,
+.sidebar a:hover {
+    color: rgba(63, 49, 48, 1);
+    transition: 0.5s;
+}
+
+.sidebar a.active::after {
+    content: url(../img/sidebar-active.svg);
+    position: absolute;
+    right: -1px;
+    top: 11px;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.content h1 {
+    font-size: 32px;
+    margin-top: 0;
+}
+
+.content h2 {
+    font-size: 24px;
+    color:#6F6D65;
+    margin-top: 0;
+}
+
+h3 {
+    color:#6F6D65;
+}
+
+.pl-60 {
+    padding-left: 60px;
+}
+
+.pt-30 {
+    padding-top: 30px;
+}
+
+.content {
+    width: 50%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+footer {
+    text-align: center;
+}
+
+.align-items-start {
+    align-items: flex-start;
+}
+
+.content-menu {
+    width: 25%;
+    position: sticky;
+    top: 0;
+}
+
+.content-menu nav {
+    background: rgba(0,0,0,0.05);
+    padding: 15px 30px;
+}
+
+.content-menu a {
+    color: #3F3130;
+    opacity: 0.5;
+    margin: 0 0 15px;
+    display: block;
+}
+
+.content-menu a:hover,
+.content-menu a.active {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.content-menu a.ad {
+    opacity: 1;
+}
+
+.content-menu a.ad:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.light-bg {
+    background: url(../img/footer.jpg);
+    background-size: cover;
+    padding: 30px;
+    color: white;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+#toTop {
+    position:fixed;
+    bottom:0;
+    right:20px;
+    display:none;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+@media screen and (max-width:992px) {
+    .pl-60 {
+        padding-left: 40px;
+    }
+
+    .pr-60 {
+        padding-right: 40px;
+    }
+
+    .mb-60 {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .sidebar, .content-menu {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .pl-60 {
+        padding-left: 15px;
+    }
+
+    .pr-60 {
+        padding-right: 15px;
+    }
+
+    .mt-50 {
+        margin-top: 30px;
+    }
+}

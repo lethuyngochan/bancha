@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả những gì bạn cần biết về Trà Bancha</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <meta property="og:image" content="img/share.jpg">
+    <style>
+        @font-face {
+            font-family: Allison;
+            src: url(fonts/Allison-Regular.ttf);
+        }
+
+        header {
+            color: white;
+            background: url(img/bancha-banner.jpg) center;
+            background-size: cover;
+            text-shadow: 0px 0px 70px black;
+            z-index: 1;
+        }
+
+        header a {
+            padding: 0 30px;
+        }
+
+        body {
+            line-height: 1.5;
+            margin: 0;
+            background: #F6F5F3;
+            color: #3F3130;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .font-96 {
+            font-size: 250px;
+            line-height: 0.7;
+            font-family: Allison;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .pt-30 {
+            padding-top: 30px;
+        }
+
+        .pr-15 {
+            padding-right: 15px;
+        }
+
+        .pr-30 {
+            padding-right: 30px;
+        }
+
+        .pr-60 {
+            padding-right: 60px;
+        }
+
+        .pb-15 {
+            padding-bottom: 15px;
+        }
+
+        .pb-100 {
+            padding-bottom: 100px;
+        }
+
+        .pl-15 {
+            padding-left: 15px;
+        }
+
+        .pl-30 {
+            padding-left: 30px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .d-inline-block {
+            display: inline-block;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            transition: 0.5s;
+        }
+
+        .categories {
+            min-width: 1000px;
+        }
+
+        .categories a {
+            width: 12.4%;
+            height: 130px;
+            display: inline-block;
+            margin: 0.05%;
+        }
+
+        .align-items-end {
+            align-items: flex-end;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .category {
+            height: 100%;
+        }
+
+        .category p {
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
+            height: 100%;
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: scroll;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 7px;
+            font-size: 40px;
+            line-height: 0.5;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .uppercase .overlay-content a span a {
+            text-transform: none;
+        }
+
+        .submenu-img {
+            width: 18px;
+        }
+
+        header .justify-between {
+            padding: 0 15px;
+        }
+
+        #mainNav .closebtn {
+            left: 8px;
+        }
+
+        #subNav .closebtn {
+            right: 4px;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        @media screen and (max-width:992px) {
+            .font-96 {
+                font-size: 70px;
+            }
+
+            .pb-100 {
+                padding-bottom: 60px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            header.pt-30 {
+                padding-top: 0;
+            }
+
+            header .justify-between {
+                position: fixed;
+                width: 100%;
+            }
+
+            header .justify-center {
+                padding-top: 60px;
+            }
+
+            .darkHeader {
+                background: black;
+            }
+
+            .font-96 {
+                font-size: 80px;
+            }
+
+            .logo {
+                width: 90px;
+            }
+
+            .pb-100 {
+                padding-bottom: 40px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media screen and (max-width:600px) {}
+    </style>
+</head>
+
+<body>
+    <header class="pt-30 pb-100">
+        <div class="container">
+            <div class="d-flex justify-between align-items-center" id="menus">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="mobile-menu">&#9776;</span>
+                <a href="/"><img src="img/bancha-logo.svg" class="logo"></a>
+                <div style="font-size:30px;cursor:pointer" onclick="openSubNav()" class="mobile-menu">
+                    <img src="img/submenu.svg" class="submenu-img">
+                </div>
+            </div>
+            <div id="mainNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content pb-15">
+                    <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
+                    <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+                    <a href="#">Cách làm và cách pha trà Bancha</a>
+                    <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
+                    <a href="#">Trà bancha gạo lứt</a>
+                    <a href="#">Trà bancha Shan Tuyết</a>
+                </div>
+            </div>
+            <div id="subNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSubNav()">&times;</a>
+                <div class="overlay-content pb-15">
+                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
+                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                </div>
+            </div>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mainNav").style.display = "block";
+                }
+
+                function closeNav() {
+                    document.getElementById("mainNav").style.display = "none";
+                }
+                function openSubNav() {
+                    document.getElementById("subNav").style.display = "block";
+                }
+
+                function closeSubNav() {
+                    document.getElementById("subNav").style.display = "none";
+                }
+            </script>
+            <div class="d-flex justify-center">
+                <div class="d-inline-block">
+                    <p class="font-96 mb-0 mt-0">bancha.vn</p>
+                    <p class="text-right mt-0">Trà già bancha 3 năm</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="d-flex flex-wrap container mt-50 align-items-start mb-60">
+        <nav class="sidebar">
+            <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
+            <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+            <a href="#">Cách làm và cách pha trà Bancha</a>
+            <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
+            <a href="#">Trà bancha gạo lứt</a>
+            <a href="#">Trà bancha Shan Tuyết</a>
+        </nav>
+        <div class="pl-60 pr-60 content">
+            <h1 id="div1">Tất cả những gì bạn cần biết về Trà Bancha</h1>
+            <p><b>Trà Bancha là một loại trà dưỡng sinh được làm từ những chiếc lá lâu năm của cây chè và do đó chúng có
+                    giá trị về mặt sức khỏe hơn rất nhiều so với các loại trà khác.</b></p>
+            <p><b>Trà Bancha có hàm lượng caffein thấp hơn nhiều so với trà thường và sở hữu hương vị độc đáo, riêng
+                    biệt. Trong bài viết này, chúng ta sẽ tìm hiểu trà Bancha là gì, hương vị của loại trà này như thế
+                    nào và cách pha trà Bancha.</b></p>
+            <h2>Giới thiệu về Trà Bancha</h2>
+            <p><b>Công dụng:</b> Trà Bancha mang lại vô số lợi ích cho cơ thể, chẳng hạn như thúc đẩy tiêu hóa và giải
+                độc các chất có hại như rượu, thức ăn, độc tố và hóa chất. Hỗ trợ lọc máu, giảm mệt mỏi và căng thẳng
+                đồng thời kích thích tiêu hóa và thúc đẩy tính kiềm. </p>
+            <p>Ngoài ra, tính chất khử trùng của nó làm cho nó trở thành một giải pháp có giá trị để làm sạch vết
+                thương, làm sạch da mặt và điều trị mụn trứng cá. Trà Bancha thậm chí có thể dùng như một loại nước súc
+                miệng và dung dịch vệ sinh phụ nữ hiệu quả.</p>
+            <img src="img/pexels-ella-olsson-1640775.jpg" class="w-100"><br>
+            <h3>Trà Bancha là gì?</h3>
+            <p>Lá cây trà Bancha được thu hái vào cuối mùa thu, khi những chiếc lá đã lớn và có màu xanh đậm. Điều này
+                làm cho trà Bancha có hàm lượng tannin (hợp chất tự nhiên trong trà) thấp hơn so với các loại trà khác.
+                Điều này cũng tạo ra hương vị êm dịu, nhẹ nhàng và ít đắng.</p>
+            <p>Quá trình chế biến phức tạp của trà Bancha bao gồm một loạt các kỹ thuật, bao gồm nấu, cuộn và sấy khô,
+                hoạt động hài hòa để nắm bắt được bản chất vốn có của lá cây trà lâu năm. Quá trình tỉ mỉ này bảo tồn
+                các thuộc tính đặc biệt của trà đồng thời tăng cường hương vị tự nhiên của nó. </p>
+            <img src="img/pexels-suzy-hazelwood-1306548.jpg" class="w-100"><br>
+            <p>Trà Bancha là một loại trà truyền thống đặc biệt của Nhật Bản, được làm từ lá cây trà thu hoạch sau vụ
+                mùa chính vào cuối mùa thu. Từ Bancha trong tiếng Nhật bao gồm hai ký tự kanji “ban” 番 và cha “茶”. Ký tự
+                “cha” có nghĩa là trà, còn ký tự “ban” ám chỉ về “thứ tự phía sau”. Như vậy “Bancha” có nghĩa là “trà
+                hái sau”. </p>
+            <p>Đúng như tên gọi, trà Bancha được thu hoạch muộn hơn trong năm, sau shincha và Sencha. Đây sẽ là một cách
+                hay để phân biệt Sencha với Bancha vì Bancha được làm từ vụ thu hoạch thứ hai, thứ ba hoặc thậm chí thứ
+                tư và nó được làm bằng những lá già hơn của cây chè.</p>
+            <h2 id="div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</h2>
+            <p>Theo phương pháp dưỡng sinh Oshawa, lá Trà bancha (từ 3 năm trở lên) rất đặc biệt và lợi ích sức khỏe
+                vượt trội hơn so với các loại trà khác. Thời gian sinh trưởng dài của nó dẫn đến hàm lượng caffein thấp
+                hơn, nhưng nó bù lại bằng nồng độ khoáng chất cao hơn và hàm lượng tanin thấp.</p>
+            <p>Hương vị nhẹ nhàng và hàm lượng caffein thấp của Trà Bancha mang đến cơ hội thưởng thức loại trà này mà
+                không lo bị mất ngủ, không giống như các loại trà khác có thể để lại dư vị đắng hoặc chát.</p>
+        </div>
+        <div class="content-menu">
+            <nav class="mb-30">
+                <p><b>Mục Lục Bài Viết</b></p>
+                <div class="content-menu-items">
+                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
+                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                </div>
+            </nav>
+            <a href="#" class="ad"><img src="img/mua-bancha-o-dau-tot.jpg" class="w-100"></a>
+        </div>
+    </section>
+
+    <footer class="pt-30">
+        <div class="light-bg">
+            <img src="img/bancha-logo.svg">
+            <p class="mt-0">bancha.vn - Cẩm nang kiến thức chuyên sâu về trà bancha</p>
+            <div>
+                <a href="#"><img src="img/bancha-facebook.svg"></a>
+                <a href="#"><img src="img/bancha-group.svg"></a>
+            </div>
+        </div>
+        <p>©bancha.vn 2023</p>
+    </footer>
+    <button id="toTop"><img src="img/back-to-top.svg"></button>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $("#menus").addClass("darkHeader");
+                } else {
+                    $("#menus").removeClass("darkHeader");
+                }
+            });
+        });
+        $(document).ready(function () {
+
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+
+            //Click event to scroll to top
+            $('#toTop').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 200);
+                return false;
+            });
+
+        });
+
+        var contentMenuItems = document.querySelectorAll(".content-menu-items a");
+        var ifTrue = document.querySelectorAll(".content-menu-items a.active");
+        contentMenuItems.forEach(function(course, index, array) {
+            course.onclick = function () {
+                course.classList.add("active");
+            }
+        })
+    </script>
+</body>
+
+</html>
