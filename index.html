@@ -454,12 +454,19 @@
         });
 
         var contentMenuItems = document.querySelectorAll(".content-menu-items a");
-        var ifTrue = document.querySelectorAll(".content-menu-items a.active");
-        contentMenuItems.forEach(function(course, index, array) {
+
+        contentMenuItems.forEach(function (course) {
             course.onclick = function () {
+                // Remove "active" class from all <a> elements
+                contentMenuItems.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+                // Add "active" class to the clicked <a> element
                 course.classList.add("active");
-            }
-        })
+            };
+        });
+
     </script>
 </body>
 
