@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả những gì bạn cần biết về Trà Bancha</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <meta property="og:image" content="img/share.jpg">
+    <style>
+        @font-face {
+            font-family: Allison;
+            src: url(fonts/Allison-Regular.ttf);
+        }
+
+        header {
+            color: white;
+            background: url(img/bancha-banner.jpg) center;
+            background-size: cover;
+            text-shadow: 0px 0px 70px black;
+            z-index: 1;
+        }
+
+        header a {
+            padding: 0 30px;
+        }
+
+        body {
+            line-height: 1.5;
+            margin: 0;
+            background: #F6F5F3;
+            color: #3F3130;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .font-96 {
+            font-size: 250px;
+            line-height: 0.7;
+            font-family: Allison;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .pt-30 {
+            padding-top: 30px;
+        }
+
+        .pr-15 {
+            padding-right: 15px;
+        }
+
+        .pr-30 {
+            padding-right: 30px;
+        }
+
+        .pr-60 {
+            padding-right: 60px;
+        }
+
+        .pb-15 {
+            padding-bottom: 15px;
+        }
+
+        .pb-100 {
+            padding-bottom: 100px;
+        }
+
+        .pl-15 {
+            padding-left: 15px;
+        }
+
+        .pl-30 {
+            padding-left: 30px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .d-inline-block {
+            display: inline-block;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            transition: 0.5s;
+        }
+
+        .categories {
+            min-width: 1000px;
+        }
+
+        .categories a {
+            width: 12.4%;
+            height: 130px;
+            display: inline-block;
+            margin: 0.05%;
+        }
+
+        .align-items-end {
+            align-items: flex-end;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .category {
+            height: 100%;
+        }
+
+        .category p {
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
+            height: 100%;
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: scroll;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 7px;
+            font-size: 40px;
+            line-height: 0.5;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .uppercase .overlay-content a span a {
+            text-transform: none;
+        }
+
+        .submenu-img {
+            width: 18px;
+        }
+
+        header .justify-between {
+            padding: 0 15px;
+        }
+
+        #mainNav .closebtn {
+            left: 8px;
+        }
+
+        #subNav .closebtn {
+            right: 4px;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        @media screen and (max-width:992px) {
+            .font-96 {
+                font-size: 70px;
+            }
+
+            .pb-100 {
+                padding-bottom: 60px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            header.pt-30 {
+                padding-top: 0;
+            }
+
+            header .justify-between {
+                position: fixed;
+                width: 100%;
+            }
+
+            header .justify-center {
+                padding-top: 60px;
+            }
+
+            .darkHeader {
+                background: black;
+            }
+
+            .font-96 {
+                font-size: 80px;
+            }
+
+            .logo {
+                width: 90px;
+            }
+
+            .pb-100 {
+                padding-bottom: 40px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media screen and (max-width:600px) {}
+    </style>
+</head>
+
+<body>
+    <header class="pt-30 pb-100">
+        <div class="container">
+            <div class="d-flex justify-between align-items-center" id="menus">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="mobile-menu">&#9776;</span>
+                <a href="/"><img src="img/bancha-logo.svg" class="logo"></a>
+                <div style="font-size:30px;cursor:pointer" onclick="openSubNav()" class="mobile-menu">
+                    <img src="img/submenu.svg" class="submenu-img">
+                </div>
+            </div>
+            <div id="mainNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content pb-15">
+                    <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
+                    <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+                    <a href="#">Cách làm và cách pha trà Bancha</a>
+                    <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
+                    <a href="#">Trà bancha gạo lứt</a>
+                    <a href="#">Trà bancha Shan Tuyết</a>
+                </div>
+            </div>
+            <div id="subNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSubNav()">&times;</a>
+                <div class="overlay-content pb-15">
+                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
+                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                </div>
+            </div>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mainNav").style.display = "block";
+                }
+
+                function closeNav() {
+                    document.getElementById("mainNav").style.display = "none";
+                }
+                function openSubNav() {
+                    document.getElementById("subNav").style.display = "block";
+                }
+
+                function closeSubNav() {
+                    document.getElementById("subNav").style.display = "none";
+                }
+            </script>
+            <div class="d-flex justify-center">
+                <div class="d-inline-block">
+                    <p class="font-96 mb-0 mt-0">bancha.vn</p>
+                    <p class="text-right mt-0">Trà già bancha 3 năm</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="d-flex flex-wrap container mt-50 align-items-start mb-60">
+        <nav class="sidebar">
+            <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
+            <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+            <a href="#">Cách làm và cách pha trà Bancha</a>
+            <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
+            <a href="#">Trà bancha gạo lứt</a>
+            <a href="#">Trà bancha Shan Tuyết</a>
+        </nav>
+        <div class="pl-60 pr-60 content">
+            <h1>Cách pha trà Bancha</h1>
+
+            <p>Trà Bancha nên được thưởng thức một cách trọn vẹn nhất, vì vậy chúng tôi có một cách truyền thống để pha
+                loại trà này. Bằng cách pha trà theo cách này, bạn sẽ thấy rằng nghệ thuật pha trà và uống trà của bạn
+                tạo ra một khoảng thời gian để bạn thư giãn và có một vài khoảnh khắc để suy ngẫm về cuộc sống. Đôi khi
+                chúng ta cần điều này, đặc biệt là khi cuộc sống bận rộn chiếm phần lớn thời gian thức của chúng ta.</p>
+
+            <p><strong>Dụng cụ pha trà bạn sẽ cần:</strong></p>
+            <ul>
+                <li>Kyusu (ấm trà)</li>
+                <li>Chawan (tách trà)</li>
+                <li>Ấm đun nước</li>
+            </ul>
+            <h2>6 bước pha trà Bancha chuyên nghiệp</h2>
+            <p>Pha trà Bancha rất dễ dàng, bạn chỉ cần làm theo những hướng dẫn đơn giản dưới đây. Bạn sẽ nhận thấy sự
+                khác biệt lớn duy nhất trong việc pha chế sencha so với bancha là nhiệt độ.</p>
+            <p>Được gọi chung là “Bancha”, những loại trà này được pha nhanh nhất với nước nóng hơn so với nước được sử
+                dụng cho Sencha hoặc Gyokuro. Phong cách pha chế này giải phóng hương thơm thơm, mặn của trà.</p>
+            <p>Sau đây là hướng dẫn pha trà cho một người. Vui lòng điều chỉnh lượng trà và nước nóng sử dụng tùy thích
+                để pha trà cho nhiều người hơn.</p>
+
+            <ul>
+                <li><strong>Bước 1:</strong> Bắt đầu bằng cách làm nóng ấm trà bằng nước nóng. (Vứt bỏ nước này sau khi
+                    ấm trà được làm ấm.)</li>
+                <li><strong>Bước 2:</strong> Hãy hâm nóng chén trà bằng cách đổ nước nóng vào chén và sau đó đổ đi để
+                    làm ấm chén.</li>
+                <li><strong>Bước 3:</strong> Cho 5 gram trà Bancha vào ấm trà.</li>
+                <li><strong>Bước 4:</strong> Đổ vào 150ml-200ml nước ở nhiệt độ 80-85 độ C (không sôi).</li>
+                <li><strong>Bước 5:</strong> Để nguyên lá trong 1-2 phút để cho lá trà truyền hương và chất chứa trong
+                    trà được giải phóng.</li>
+                <li><strong>Bước 6:</strong> Sau khi ngâm, sử dụng ấm chén trà hoặc ấm trà để rót trà từ chén ra cốc.
+                    Trà Bancha có thể uống nóng hoặc để nguội tùy sở thích cá nhân.</li>
+                <li><strong>Bước 7:</strong> Bạn có thể tái sử dụng lá 3-4 lần nữa hoặc chỉ cho đến khi chúng mất đi
+                    hương vị.</li>
+            </ul>
+
+            <p><b>Sử dụng nước có cùng nhiệt độ nhưng thời gian pha là 20 giây cho mỗi lần thêm nước tiếp theo.</b></p>
+            <p>Nếu bạn không phải là người thích có các hạt trà ngâm trong cố
+            <h2>10 nguyên tắc vàng làm trà bancha ngon</h2>
+            <p><b>10 nguyên tắc vàng cần tôn trọng nếu bạn muốn tạo ra món bancha hoàn hảo:</b></p>
+            <ul>
+                <li>Mua Bancha chất lượng tốt hơn</li>
+                <li>Sử dụng đúng dụng cụ pha trà</li>
+                <li>Dốc một thời gian ngắn</li>
+                <li>Lưu ý đến nhiệt độ nước</li>
+                <li>Hãy cẩn thận với các Add-In tạo hương vị</li>
+                <li>Pha lạnh Bancha của bạn</li>
+                <li>Chọn một Bancha có hương vị tuyệt vời</li>
+                <li>Pha Bancha đúng cách sẽ ngon</li>
+                <li>Cải thiện vị đắng của Bancha</li>
+                <li>Chọn Bancha ngon nhất</li>
+            </ul>
+            <h2>Kết hợp trà Bancha với sản phẩm khác</h2>
+            <p><b>Dựa trên kiến thức về trà trong ẩm thực Nhật Bản, dưới đây là một số cách kết hợp trà Bancha với các
+                    sản phẩm khác để tạo ra các loại trà đặc biệt:</b></p>
+            <h3>Genmaicha - Trà Bancha Gạo Lứt Rang</h3>
+            <p>Kết hợp trà Bancha với gạo lứt rang (genmai) để tạo ra loại trà gạo rang thơm ngon. Bạn có thể pha trà
+                Bancha với gạo lứt rang và ngâm trong nước nóng trong một khoảng thời gian để cho các hương vị hòa quyện
+                với nhau.</p>
+            <h3>Hojicha</h3>
+            <p>Kết hợp trà Bancha với lá trà hojicha, một loại trà xanh đã được rang để tạo ra một loại trà có hương vị
+                đậm đà và thơm ngon. Pha trà Bancha với lá hojicha và ngâm trong nước nóng trong một thời gian ngắn
+                trước khi thưởng thức.</p>
+            <h3>Trà Bancha và Yuzu</h3>
+            <p>Yuzu là một loại quả chanh nhỏ có hương thơm đặc trưng trong ẩm thực Nhật Bản. Kết hợp trà Bancha với một
+                lát yuzu hoặc một ít nước ép yuzu để tạo ra một loại trà có hương vị tươi mát và đặc trưng.</p>
+            <h3>Trà Bancha và Ume</h3>
+            <p>Ume là quả mận xanh chua được sử dụng trong nhiều món ăn và đồ uống Nhật Bản. Kết hợp trà Bancha với một
+                ít nước ép hoặc một miếng mận ume để tạo ra một loại trà có hương vị chua ngọt độc đáo.</p>
+            <h3>Trà Bancha và Shiso</h3>
+            <p>Shiso là một loại lá thảo mộc có mùi thơm đặc trưng và được sử dụng rộng rãi trong ẩm thực Nhật Bản. Kết
+                hợp trà Bancha với một ít lá shiso tươi để tạo ra một loại trà có hương thơm độc đáo và tươi mát.</p>
+            <p>Lưu ý rằng các kết hợp trà Bancha với các sản phẩm khác trong ẩm thực Nhật Bản có thể thay đổi theo vùng
+                miền và sở thích cá nhân. Hãy thử nghiệm và khám phá các kết hợp trà độc đáo dựa trên kiến thức và sự
+                nghiên cứu trà đạo của bạn</p>
+            <h2>Khung giờ Thưởng thức Trà Bancha ngon nhất!</h2>
+            <p>
+                Bancha là một loại trà đặc biệt dành cho một buổi tối yên tĩnh bên đống lửa hoặc một bữa tiệc buổi
+                chiều. Là một trong những loại trà có hàm lượng caffein thấp nhất, bạn có thể tự tin uống một tách trước
+                khi đi ngủ hoặc mang đi từ nhà hàng Trung Quốc địa phương của mình. Bạn có thể khám phá ra một tình yêu
+                cho loại trà này. Trước khi bạn biết điều đó, đó là bữa trà chiều muộn và buổi tối của bạn!
+            </p>
+
+            <h2>Lời khuyên để trải nghiệm trà tuyệt vời</h2>
+            <h3>Chú ý đến hình dạng của lá trà</h3>
+            <p>Nhìn trộm bên trong ấm trà sau lần pha đầu tiên. Nếu lá trà mở ra hoàn toàn, điều đó có nghĩa là lần pha đầu tiên của bạn hơi lâu. Khoảng thời gian thêm này thường pha thêm trà đắng, vì vậy hãy cẩn thận!</p>
+            <h3>Không thêm lá mới vào lá cũ</h3>
+            <p>Khi đến lúc phải thay lá trà, hãy vứt bỏ những lá cũ. Không bao giờ thêm lá mới chồng lên lá cũ, nếu không hương vị thực sự của trà sẽ bị pha loãng.</p>
+            <h3>Đổ hết nước trong ấm sau khi thêm nước lần tiếp theo</h3>
+            <p>Rót trà đến giọt cuối cùng. Bằng cách này, hương vị sẽ được giữ lại cho lần pha thứ hai và thứ ba.</p>
+            <h3>Pha lần thứ hai ngay sau lần đầu tiên</h3>
+            <p>Lần pha thứ hai nên được thực hiện ngay sau lần pha đầu tiên. Đừng để những lá trà đã sử dụng nằm yên trong ấm trong thời gian dài trước khi pha lần thứ hai và thứ ba.</p>
+            <h3>Bảo quản lá trà ở nơi phù hợp</h3>
+            <p>Lá trà dễ dàng hấp thụ mùi của những thứ khác, vì vậy bạn cần hết sức cẩn thận để bảo quản chúng đúng cách. Các gói chưa mở nên được giữ trong tủ đông và không được mở ra trước khi chúng được lấy ra khỏi tủ đông đủ lâu để được làm ấm đến nhiệt độ phòng. Sau khi mở, chúng nên được đặt trong hộp kín và bảo quản trong tủ lạnh.</p>
+
+        </div>
+        <div class="content-menu">
+            <nav class="mb-30">
+                <p><b>Mục Lục Bài Viết</b></p>
+                <div class="content-menu-items">
+                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
+                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                </div>
+            </nav>
+            <a href="#" class="ad"><img src="img/mua-bancha-o-dau-tot.jpg" class="w-100"></a>
+        </div>
+    </section>
+
+    <footer class="pt-30">
+        <div class="light-bg">
+            <img src="img/bancha-logo.svg">
+            <p class="mt-0">bancha.vn - Cẩm nang kiến thức chuyên sâu về trà bancha</p>
+            <div>
+                <a href="#"><img src="img/bancha-facebook.svg"></a>
+                <a href="#"><img src="img/bancha-group.svg"></a>
+            </div>
+        </div>
+        <p>©bancha.vn 2023</p>
+    </footer>
+    <button id="toTop"><img src="img/back-to-top.svg"></button>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $("#menus").addClass("darkHeader");
+                } else {
+                    $("#menus").removeClass("darkHeader");
+                }
+            });
+        });
+        $(document).ready(function () {
+
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+
+            //Click event to scroll to top
+            $('#toTop').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 200);
+                return false;
+            });
+
+        });
+
+        var contentMenuItems = document.querySelectorAll(".content-menu-items a");
+        var ifTrue = document.querySelectorAll(".content-menu-items a.active");
+        contentMenuItems.forEach(function (course, index, array) {
+            course.onclick = function () {
+                course.classList.add("active");
+            }
+        })
+    </script>
+</body>
+
+</html>

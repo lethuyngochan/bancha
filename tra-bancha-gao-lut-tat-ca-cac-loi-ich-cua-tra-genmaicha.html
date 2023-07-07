@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tất cả những gì bạn cần biết về Trà Bancha</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+    <meta property="og:image" content="img/share.jpg">
+    <style>
+        @font-face {
+            font-family: Allison;
+            src: url(fonts/Allison-Regular.ttf);
+        }
+
+        header {
+            color: white;
+            background: url(img/bancha-banner.jpg) center;
+            background-size: cover;
+            text-shadow: 0px 0px 70px black;
+            z-index: 1;
+        }
+
+        header a {
+            padding: 0 30px;
+        }
+
+        body {
+            line-height: 1.5;
+            margin: 0;
+            background: #F6F5F3;
+            color: #3F3130;
+        }
+
+        .uppercase {
+            text-transform: uppercase;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .font-96 {
+            font-size: 250px;
+            line-height: 0.7;
+            font-family: Allison;
+        }
+
+        .mb-0 {
+            margin-bottom: 0;
+        }
+
+        .mb-30 {
+            margin-bottom: 30px;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+        }
+
+        .pt-30 {
+            padding-top: 30px;
+        }
+
+        .pr-15 {
+            padding-right: 15px;
+        }
+
+        .pr-30 {
+            padding-right: 30px;
+        }
+
+        .pr-60 {
+            padding-right: 60px;
+        }
+
+        .pb-15 {
+            padding-bottom: 15px;
+        }
+
+        .pb-100 {
+            padding-bottom: 100px;
+        }
+
+        .pl-15 {
+            padding-left: 15px;
+        }
+
+        .pl-30 {
+            padding-left: 30px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .justify-center {
+            justify-content: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .d-inline-block {
+            display: inline-block;
+        }
+
+        a:hover {
+            opacity: 0.8;
+            transition: 0.5s;
+        }
+
+        .categories {
+            min-width: 1000px;
+        }
+
+        .categories a {
+            width: 12.4%;
+            height: 130px;
+            display: inline-block;
+            margin: 0.05%;
+        }
+
+        .align-items-end {
+            align-items: flex-end;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .category {
+            height: 100%;
+        }
+
+        .category p {
+            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
+            height: 100%;
+            margin: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            display: none;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow: scroll;
+        }
+
+        .overlay-content {
+            position: relative;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay a:hover,
+        .overlay a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay .closebtn {
+            position: absolute;
+            top: 7px;
+            font-size: 40px;
+            line-height: 0.5;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .uppercase .overlay-content a span a {
+            text-transform: none;
+        }
+
+        .submenu-img {
+            width: 18px;
+        }
+
+        header .justify-between {
+            padding: 0 15px;
+        }
+
+        #mainNav .closebtn {
+            left: 8px;
+        }
+
+        #subNav .closebtn {
+            right: 4px;
+        }
+
+        .overflow-scroll {
+            overflow: scroll;
+        }
+
+        .align-items-center {
+            align-items: center;
+        }
+
+        @media screen and (max-height: 450px) {
+            .overlay a {
+                font-size: 20px
+            }
+
+            .overlay .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        @media screen and (max-width:992px) {
+            .font-96 {
+                font-size: 70px;
+            }
+
+            .pb-100 {
+                padding-bottom: 60px;
+            }
+        }
+
+        @media screen and (max-width:767px) {
+            .mobile-menu {
+                display: block;
+            }
+
+            header.pt-30 {
+                padding-top: 0;
+            }
+
+            header .justify-between {
+                position: fixed;
+                width: 100%;
+            }
+
+            header .justify-center {
+                padding-top: 60px;
+            }
+
+            .darkHeader {
+                background: black;
+            }
+
+            .font-96 {
+                font-size: 80px;
+            }
+
+            .logo {
+                width: 90px;
+            }
+
+            .pb-100 {
+                padding-bottom: 40px;
+            }
+
+            .content h1 {
+                font-size: 28px;
+            }
+        }
+
+        @media screen and (max-width:600px) {}
+    </style>
+</head>
+
+<body>
+    <header class="pt-30 pb-100">
+        <div class="container">
+            <div class="d-flex justify-between align-items-center" id="menus">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="mobile-menu">&#9776;</span>
+                <a href="/"><img src="img/bancha-logo.svg" class="logo"></a>
+                <div style="font-size:30px;cursor:pointer" onclick="openSubNav()" class="mobile-menu">
+                    <img src="img/submenu.svg" class="submenu-img">
+                </div>
+            </div>
+            <div id="mainNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="overlay-content pb-15">
+                    <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
+                    <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+                    <a href="#">Cách làm và cách pha trà Bancha</a>
+                    <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
+                    <a href="#">Trà bancha gạo lứt</a>
+                    <a href="#">Trà bancha Shan Tuyết</a>
+                </div>
+            </div>
+            <div id="subNav" class="overlay">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeSubNav()">&times;</a>
+                <div class="overlay-content pb-15">
+                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
+                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                </div>
+            </div>
+
+            <script>
+                function openNav() {
+                    document.getElementById("mainNav").style.display = "block";
+                }
+
+                function closeNav() {
+                    document.getElementById("mainNav").style.display = "none";
+                }
+                function openSubNav() {
+                    document.getElementById("subNav").style.display = "block";
+                }
+
+                function closeSubNav() {
+                    document.getElementById("subNav").style.display = "none";
+                }
+            </script>
+            <div class="d-flex justify-center">
+                <div class="d-inline-block">
+                    <p class="font-96 mb-0 mt-0">bancha.vn</p>
+                    <p class="text-right mt-0">Trà già bancha 3 năm</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="d-flex flex-wrap container mt-50 align-items-start mb-60">
+        <nav class="sidebar">
+            <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
+            <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+            <a href="#">Cách làm và cách pha trà Bancha</a>
+            <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
+            <a href="#">Trà bancha gạo lứt</a>
+            <a href="#">Trà bancha Shan Tuyết</a>
+        </nav>
+        <div class="pl-60 pr-60 content">
+            <h1>Trà bancha gạo lứt - Tất cả các lợi ích của trà Genmaicha</h1>
+            <p>Nếu bạn là người hâm mộ trà bancha gạo lứt rang hoặc đơn giản là bạn tò mò về loại trà này, bạn có thể
+                muốn tìm hiểu về tất cả những lợi ích tuyệt vời của trà genmaicha.</p>
+            <p>Trong bài viết này, chúng tôi sẽ đề cập đến một số lợi ích khác nhau của genmaicha và cách bạn có thể tận
+                dụng tối đa lợi ích của chúng bằng cách tự pha trà genmaicha tại nhà.</p>
+            <h2>I. Trà bancha gạo lứt rang (Genmaicha) là gì?</h2>
+            <p>Trước khi thảo luận về lợi ích của trà xanh genmaicha, trước tiên chúng ta hãy thảo luận về loại trà này!
+            </p>
+            <p><b>Genmaicha</b> là một loại trà xanh truyền thống của Nhật Bản được làm bằng cách trộn <b>trà sencha</b> hoặc <b>lá
+                bancha</b> với gạo lứt rang.</p>
+            <p>"Genmaicha" trong tiếng Nhật là sự kết hợp của hai từ: "Genmai" (玄米) và "Cha" (茶).</p>
+            <ul>
+                <li>"Genmai" (玄米) có nghĩa là gạo lứt, là loại gạo nguyên hạt chưa qua xử lý. Trong trường hợp này,
+                    "Genmai"
+                    đề cập đến gạo lứt đã được rang và sử dụng để pha trà.</li>
+                <li>"Cha" (茶) có nghĩa là trà, thường được sử dụng để chỉ các loại trà xanh.</li>
+            </ul>
+            <p>Vì vậy, "Genmaicha" (玄米茶) có nghĩa là "trà gạo lứt" hoặc "trà với gạo lứt". Đây là một loại trà xanh Nhật
+                Bản được pha từ lá trà xanh Bancha hoặc trà Sencha cùng với gạo lứt rang. Trà Genmaicha có hương vị đặc
+                trưng của trà xanh nhẹ nhàng kết hợp với mùi thơm đậm đà và hương vị đặc trưng của gạo lứt rang.</p>
+            <h2>Lợi ích sức khỏe của trà bancha gạo lứt Genmaicha</h2>
+            <p>Trà xanh nổi tiếng với những lợi ích sức khỏe do hàm lượng chất chống oxy hóa cao và các hợp chất có lợi
+                khác. Các hợp chất này có liên quan đến nhiều lợi ích sức khỏe, bao gồm giảm nguy cơ mắc bệnh tim, ung
+                thư và tiểu đường loại 2, cũng như cải thiện sức khỏe tâm thần và chức năng nhận thức.</p>
+            <p>Vì genmaicha là một loại trà xanh nên những lợi ích của trà xanh cũng được áp dụng cho nó. Trong lá của
+                trà genmaicha, bạn đang nhận được caffein, chất chống oxy hóa và polyphenol. Chúng ta sẽ thảo luận về
+                các hợp chất này và cách chúng tương tác với cơ thể ở phần sau của bài viết.</p>
+            <h3>Chất chống oxy hóa</h3>
+            <p>Chất chống oxy hóa là những chất có thể ngăn ngừa hoặc làm chậm tác hại do các phân tử có hại gọi là gốc
+                tự do gây ra. Các gốc tự do này có thể làm hỏng tế bào, protein và DNA, có thể dẫn đến các vấn đề sức
+                khỏe khác nhau như ung thư, bệnh tim và lão hóa. Chất chống oxy hóa hoạt động bằng cách vô hiệu hóa các
+                gốc tự do và ngăn chặn chúng gây ra thiệt hại.</p>
+            <p>Trà Genmaicha rất giàu chất chống oxy hóa, đặc biệt là catechin, một loại flavonoid. Catechin là chất
+                chống oxy hóa dồi dào nhất trong trà xanh, chiếm 30-40% tổng lượng chất chống oxy hóa. Các chất chống
+                oxy hóa khác được tìm thấy trong trà genmaicha bao gồm epicatechin, gallocatechin và theanine.</p>
+            <h3>Bệnh tim</h3>
+            <p>Các chất chống oxy hóa có trong trà genmaicha có thể có nhiều lợi ích sức khỏe tiềm năng. Catechin, chất
+                chống oxy hóa phong phú nhất trong trà genmaicha, có thể giúp giảm nguy cơ mắc bệnh tim bằng cách giảm
+                mức cholesterol và giảm huyết áp.</p>
+            <p>Vì bệnh tim là nguyên nhân gây tử vong hàng đầu ở Hoa Kỳ, điều đặc biệt quan trọng là phải theo dõi các
+                yếu tố rủi ro này và cố gắng giảm thiểu chúng.</p>
+            <h3>Chống viêm</h3>
+            <p>Chất chống oxy hóa trong trà genmaicha cũng có thể có đặc tính chống viêm, có thể giúp giảm viêm trong cơ
+                thể và tăng cường sức khỏe tổng thể. Ngoài ra, các chất chống oxy hóa trong trà genmaicha cũng có thể
+                giúp tăng cường hệ thống miễn dịch, giúp cơ thể dễ dàng chống lại nhiễm trùng và bệnh tật.</p>
+            <p>Các nghiên cứu cũng cho thấy rằng các chất chống oxy hóa có trong trà genmaicha có thể có đặc tính chống
+                ung thư và cũng có thể giúp ngăn ngừa sự suy giảm nhận thức. Tuy nhiên, cần nhiều nghiên cứu hơn để hiểu
+                đầy đủ những lợi ích sức khỏe tiềm ẩn của chất chống oxy hóa trong trà genmaicha.</p>
+            <h3>Cải thiện sức khỏe tinh thần và giải tỏa căng thẳng</h3>
+            <p>Trà Genmaicha đã được phát hiện là có tác dụng làm dịu hệ thần kinh, có thể giúp giảm căng thẳng và lo
+                lắng. Theanine, một loại axit amin có trong trà genmaicha, đã được chứng minh là làm tăng sản xuất sóng
+                alpha trong não, có liên quan đến trạng thái thư giãn và tỉnh táo.</p>
+            <p>Ngoài ra, các chất chống oxy hóa có trong trà genmaicha có thể giúp bảo vệ não khỏi bị hư hại và viêm
+                nhiễm, điều này có thể có tác động tích cực đến sức khỏe tâm thần. Tuy nhiên, cần nhiều nghiên cứu hơn
+                để hiểu đầy đủ về tác dụng của trà genmaicha đối với sức khỏe tâm thần và căng thẳng.</p>
+
+            <h3>Tăng cường Hệ tiêu hóa và sức khỏe đường ruột</h3>
+            <p>Các chất chống oxy hóa có trong trà genmaicha cũng có thể có tác động tích cực đến tiêu hóa và sức khỏe
+                đường ruột. Chúng có thể giúp giảm viêm trong ruột, có thể làm giảm các triệu chứng của các tình trạng
+                như hội chứng ruột kích thích (IBS) và bệnh viêm ruột (IBD).</p>
+            <p>Ngoài ra, trà genmaicha cũng có thể giúp thúc đẩy sự phát triển của vi khuẩn có lợi trong ruột, giúp cải
+                thiện sức khỏe tổng thể của đường ruột. Tuy nhiên, cần nhiều nghiên cứu hơn để hiểu đầy đủ về tác dụng
+                của trà genmaicha đối với tiêu hóa và sức khỏe đường ruột.</p>
+            <h3>Lợi ích của trà bancha gạo lứt Genmaicha đối với da và tóc</h3>
+            <p>Bạn có thể hài lòng khi biết rằng genmaicha cũng có lợi cho da và tóc! Các chất chống oxy hóa có trong
+                trà genmaicha cũng có thể có tác động tích cực đến sức khỏe của da và tóc. Chúng có thể giúp bảo vệ da
+                khỏi bị hư hại do bức xạ tia cực tím và độc tố môi trường, có thể dẫn đến lão hóa sớm.</p>
+            <p>Ngoài ra, các chất chống oxy hóa trong trà genmaicha có thể giúp thúc đẩy sự phát triển của các tế bào da
+                và tóc khỏe mạnh. Tuy nhiên, cần nhiều nghiên cứu hơn để hiểu đầy đủ về tác dụng của trà genmaicha đối
+                với sức khỏe của da và tóc.</p>
+
+            <h3>Giới hạn lợi ích sức khỏe của Genmaicha</h3>
+            <p>Cần lưu ý là mặc dù trà genmaicha có thể có những lợi ích tiềm năng đối với sức khỏe tâm thần, tiêu hóa,
+                sức khỏe của da và tóc, nhưng không nên coi nó là phương tiện duy nhất để cải thiện những tình trạng này
+                và cần có nhiều nghiên cứu hơn để hiểu đầy đủ về tác dụng của nó.</p>
+            <p>Bạn nên tham khảo ý kiến ​​của chuyên gia chăm sóc sức khỏe hoặc chuyên gia dinh dưỡng trước khi thực
+                hiện bất kỳ thay đổi đáng kể nào đối với chế độ ăn uống hoặc lối sống của bản thân!</p>
+            <h2>Trà bancha gạo lứt có mức Caffeine thấp</h2>
+            <p><b>Mức độ caffeine của Genmaicha</b> khá thấp. Nó không chứa một <b>lượng caffeine vừa phải</b>.</p>
+            <p>Genmaicha thậm chí còn nằm trong top 8 loại trà có hàm lượng caffeine thấp nhất.</p>
+            <p>Caffeine là một chất kích thích tự nhiên được tìm thấy trong nhiều loại thực phẩm và đồ uống, bao gồm
+                trà, cà phê và sô cô la.</p>
+            <p>Khi tiêu thụ, nó hoạt động như một chất kích thích hệ thần kinh trung ương, có thể dẫn đến tăng sự tỉnh
+                táo, giảm mệt mỏi và cải thiện chức năng nhận thức.</p>
+            <p>Caffeine cũng có thể có tác dụng sinh nhiệt, có thể làm tăng quá trình trao đổi chất và hỗ trợ giảm cân.
+                Tuy nhiên, tiêu thụ quá nhiều caffeine có thể dẫn đến các tác dụng phụ tiêu cực như bồn chồn, lo lắng và
+                mất ngủ.</p>
+            <p><b>So sánh caffeine của genmaicha với các loại trà khác</b></p>
+            <p>Như chúng tôi đã đề cập trước đây, trà xanh genmaicha Nhật Bản được hưởng lợi từ việc có hàm lượng
+                caffeine thấp hơn. Nếu chúng ta so sánh hàm lượng caffeine trong trà genmaicha với sencha hoặc Gyokuro,
+                thì nó thấp hơn đáng kể.</p>
+            <p>Lượng caffeine này có thể khác nhau tùy thuộc vào loại lá trà được sử dụng và phương pháp pha trà. Nhưng
+                trung bình, trà chứa khoảng 20-30mg caffeine trên mỗi cốc 8 oz (0,24 Lít). Đây là ít hơn một nửa lượng
+                caffeine được tìm thấy trong một tách cà phê.</p>
+            <h2>Lợi ích dinh dưỡng của trà bancha gạo lứt Genmaicha</h2>
+            <p>Trà Genmaicha là một loại đồ uống có hàm lượng calo thấp, là một lựa chọn tuyệt vời cho những người muốn
+                duy trì cân nặng khỏe mạnh.</p>
+            <p>Một tách trà genmaicha chỉ chứa khoảng 2-5 calo, ít hơn đáng kể so với hầu hết các loại đồ uống khác.</p>
+            <p>Ngoài ra, trà genmaicha là một nguồn hydrat hóa tuyệt vời, rất cần thiết cho sức khỏe tổng thể.</p>
+            <h3>Hàm lượng khoáng chất và dinh dưỡng của Genmaicha</h3>
+            <p>Trà xanh Genmaicha với gạo lứt rang có nhiều khoáng chất như kali, canxi và magiê. Việc bổ sung gạo lứt
+                rang trong trà genmaicha cũng làm tăng hàm lượng khoáng chất của nó. Gạo lứt là nguồn cung cấp các
+                khoáng chất tốt như magiê, kali và kẽm. Ngoài ra, trà genmaicha cũng chứa một lượng nhỏ vitamin B,
+                vitamin C và carotenoid.</p>
+            <p>Các khoáng chất có trong trà genmaicha như kali, canxi và magiê rất cần thiết để duy trì xương, cơ và dây
+                thần kinh khỏe mạnh. Ngoài ra, chúng cũng giúp duy trì huyết áp và cân bằng chất lỏng trong cơ thể. Đặc
+                biệt, magiê được biết là có tác dụng làm dịu hệ thần kinh và giúp giảm căng thẳng và lo lắng. Vitamin B,
+                Vitamin C và carotenoid có những lợi ích sức khỏe riêng như duy trì sức khỏe của da và mắt, đồng thời
+                cải thiện hệ thống miễn dịch.</p>
+            <p>Bạn cần lưu ý là mặc dù trà genmaicha có chứa một lượng nhỏ các chất dinh dưỡng này, nhưng không nên coi
+                nó là nguồn duy nhất. Một chế độ ăn uống cân bằng với nhiều loại trái cây, rau và ngũ cốc là điều cần
+                thiết để có sức khỏe tối ưu. Uống trà genmaicha như một phần của chế độ ăn uống lành mạnh, cùng với các
+                thói quen lành mạnh khác, có thể có lợi trong việc thu được các chất dinh dưỡng thiết yếu này.</p>
+            <h2>Cách Pha Trà bancha gạo lứt Genmaicha tại nhà</h2>
+            <p>Bước chuẩn bị pha trà Bancha gạo lứt <b>genmaicha</b> có thể khá đơn giản. Trà ít nhạy cảm hơn với nhiệt độ và
+                thời gian ủ, đồng thời có thể tạo ra nhiều hương vị ngay cả khi bạn pha không đúng cách.</p>
+            <p>Chúng tôi khuyên bạn nên lấy 5 gam <b>trà xanh genmaicha</b> và cho vào ấm trà. Hương vị của genmaicha có thể có
+                ảnh hưởng mạnh mẽ đến gia vị của ấm trà, vì vậy bạn có thể muốn có một ấm trà genmaicha được chỉ định,
+                hoặc ít nhất là sử dụng một ấm trà tráng men. Nếu bạn dùng ấm không tráng men thì khi pha các loại trà
+                khác sẽ khó lấy được hương vị của trà genmaicha.</p>
+            <p>Tiếp theo, bạn có thể thêm nước vào. Có hai phương pháp ủ genmaicha khác nhau. Đầu tiên là pha nó giống
+                như pha bancha hoặc hojicha bình thường, với nước 175°F hoặc 80° C và thời gian ủ là 1 phút.</p>
+            <p>Một phương pháp pha <b>trà genmaicha</b> khác là "pha nhanh" với nước gần sôi và thời gian ngâm là 20 giây. Dù
+                bằng cách nào, bạn nên sử dụng khoảng 150ml hoặc hơn nửa cốc nước một chút để pha.</p>
+            <p>Sau khi hết thời gian, bạn có thể rót <b>trà genmaicha</b> của mình vào cốc trà. Nếu bạn đang chuẩn bị trà cho
+                nhiều người, hãy chắc chắn rằng bạn sử dụng phương pháp rót thay thế. Trà cuối cùng được rót ra thường
+                có hương vị đậm đà nhất, vì vậy bạn nên chia trà cho bạn và khách của mình.</p>
+            <p>Một đặc điểm riêng biệt của trà bancha gạo lứt (<b>genmaicha</b>) là hương vị có thể kéo dài trong nhiều lần ngâm khác nhau. Ngay cả sau khi lá trà đã tiết ra hết hương vị, gạo rang sẽ tiếp tục cung cấp hương vị trong quá trình pha sau khi pha, vì vậy bạn thực sự có thể pha <b>trà xanh genmaicha với gạo rang</b> 5 lần trở lên trước khi hết hương vị.</p>
+        </div>
+        <div class="content-menu">
+            <nav class="mb-30">
+                <p><b>Mục Lục Bài Viết</b></p>
+                <div class="content-menu-items">
+                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
+                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                </div>
+            </nav>
+            <a href="#" class="ad"><img src="img/mua-bancha-o-dau-tot.jpg" class="w-100"></a>
+        </div>
+    </section>
+
+    <footer class="pt-30">
+        <div class="light-bg">
+            <img src="img/bancha-logo.svg">
+            <p class="mt-0">bancha.vn - Cẩm nang kiến thức chuyên sâu về trà bancha</p>
+            <div>
+                <a href="#"><img src="img/bancha-facebook.svg"></a>
+                <a href="#"><img src="img/bancha-group.svg"></a>
+            </div>
+        </div>
+        <p>©bancha.vn 2023</p>
+    </footer>
+    <button id="toTop"><img src="img/back-to-top.svg"></button>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $("#menus").addClass("darkHeader");
+                } else {
+                    $("#menus").removeClass("darkHeader");
+                }
+            });
+        });
+        $(document).ready(function () {
+
+            //Check to see if the window is top if not then display button
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+
+            //Click event to scroll to top
+            $('#toTop').click(function () {
+                $('html, body').animate({ scrollTop: 0 }, 200);
+                return false;
+            });
+
+        });
+
+        var contentMenuItems = document.querySelectorAll(".content-menu-items a");
+        var ifTrue = document.querySelectorAll(".content-menu-items a.active");
+        contentMenuItems.forEach(function (course, index, array) {
+            course.onclick = function () {
+                course.classList.add("active");
+            }
+        })
+    </script>
+</body>
+
+</html>
