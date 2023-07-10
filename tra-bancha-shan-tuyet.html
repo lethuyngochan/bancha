@@ -5,296 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tất cả những gì bạn cần biết về Trà Bancha</title>
+    <title>Trà Bancha Shan Tuyết - bancha.vn</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     <meta property="og:image" content="img/share.jpg">
-    <style>
-        @font-face {
-            font-family: Allison;
-            src: url(fonts/Allison-Regular.ttf);
-        }
-
-        header {
-            color: white;
-            background: url(img/bancha-banner.jpg) center;
-            background-size: cover;
-            text-shadow: 0px 0px 70px black;
-            z-index: 1;
-        }
-
-        header a {
-            padding: 0 30px;
-        }
-
-        body {
-            line-height: 1.5;
-            margin: 0;
-            background: #F6F5F3;
-            color: #3F3130;
-        }
-
-        .uppercase {
-            text-transform: uppercase;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .font-96 {
-            font-size: 250px;
-            line-height: 0.7;
-            font-family: Allison;
-        }
-
-        .mb-0 {
-            margin-bottom: 0;
-        }
-
-        .mb-30 {
-            margin-bottom: 30px;
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: auto;
-        }
-
-        .pt-30 {
-            padding-top: 30px;
-        }
-
-        .pr-15 {
-            padding-right: 15px;
-        }
-
-        .pr-30 {
-            padding-right: 30px;
-        }
-
-        .pr-60 {
-            padding-right: 60px;
-        }
-
-        .pb-15 {
-            padding-bottom: 15px;
-        }
-
-        .pb-100 {
-            padding-bottom: 100px;
-        }
-
-        .pl-15 {
-            padding-left: 15px;
-        }
-
-        .pl-30 {
-            padding-left: 30px;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .d-flex {
-            display: flex;
-        }
-
-        .justify-center {
-            justify-content: center;
-        }
-
-        .text-right {
-            text-align: right;
-        }
-
-        .d-inline-block {
-            display: inline-block;
-        }
-
-        a:hover {
-            opacity: 0.8;
-            transition: 0.5s;
-        }
-
-        .categories {
-            min-width: 1000px;
-        }
-
-        .categories a {
-            width: 12.4%;
-            height: 130px;
-            display: inline-block;
-            margin: 0.05%;
-        }
-
-        .align-items-end {
-            align-items: flex-end;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .flex-wrap {
-            flex-wrap: wrap;
-        }
-
-        .category {
-            height: 100%;
-        }
-
-        .category p {
-            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
-            height: 100%;
-            margin: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .overlay {
-            height: 100%;
-            width: 100%;
-            display: none;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: scroll;
-        }
-
-        .overlay-content {
-            position: relative;
-            top: 10px;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .overlay a {
-            padding: 8px;
-            text-decoration: none;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .overlay a:hover,
-        .overlay a:focus {
-            color: #f1f1f1;
-        }
-
-        .overlay .closebtn {
-            position: absolute;
-            top: 7px;
-            font-size: 40px;
-            line-height: 0.5;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        .justify-between {
-            justify-content: space-between;
-        }
-
-        .uppercase .overlay-content a span a {
-            text-transform: none;
-        }
-
-        .submenu-img {
-            width: 18px;
-        }
-
-        header .justify-between {
-            padding: 0 15px;
-        }
-
-        #mainNav .closebtn {
-            left: 8px;
-        }
-
-        #subNav .closebtn {
-            right: 4px;
-        }
-
-        .overflow-scroll {
-            overflow: scroll;
-        }
-
-        .align-items-center {
-            align-items: center;
-        }
-
-        @media screen and (max-height: 450px) {
-            .overlay a {
-                font-size: 20px
-            }
-
-            .overlay .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-            }
-        }
-
-        @media screen and (max-width:992px) {
-            .font-96 {
-                font-size: 70px;
-            }
-
-            .pb-100 {
-                padding-bottom: 60px;
-            }
-        }
-
-        @media screen and (max-width:767px) {
-            .mobile-menu {
-                display: block;
-            }
-
-            header.pt-30 {
-                padding-top: 0;
-            }
-
-            header .justify-between {
-                position: fixed;
-                width: 100%;
-            }
-
-            header .justify-center {
-                padding-top: 60px;
-            }
-
-            .darkHeader {
-                background: black;
-            }
-
-            .font-96 {
-                font-size: 80px;
-            }
-
-            .logo {
-                width: 90px;
-            }
-
-            .pb-100 {
-                padding-bottom: 40px;
-            }
-
-            .content h1 {
-                font-size: 28px;
-            }
-        }
-
-        @media screen and (max-width:600px) {}
-    </style>
+    <link rel="stylesheet" href="css/top.css">
 </head>
 
 <body>
@@ -310,19 +24,23 @@
             <div id="mainNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content pb-15">
-                    <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
-                    <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
-                    <a href="#">Cách làm và cách pha trà Bancha</a>
-                    <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
-                    <a href="#">Trà bancha gạo lứt</a>
-                    <a href="#">Trà bancha Shan Tuyết</a>
+                    <a href="index.html">Tất cả những gì bạn cần biết về Trà Bancha</a>
+                    <a href="tra-bancha-va-tuong-tamari.html">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+                    <a href="cach-lam-va-cach-pha-tra-bancha.html">Cách làm và cách pha trà Bancha</a>
+                    <a href="cach-pha-tra-bancha-theo-cong-thuc-thay-tue-hai.html">Cách pha trà Bancha theo công thức
+                        Thầy Tuệ Hải</a>
+                    <a href="tra-bancha-gao-lut.html">Trà bancha gạo lứt</a>
+                    <a href="tra-bancha-shan-tuyet.html">Trà bancha Shan Tuyết</a>
                 </div>
             </div>
             <div id="subNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeSubNav()">&times;</a>
                 <div class="overlay-content pb-15">
-                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
-                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                    <a href="#div1">Giới thiệu về Trà shan tuyết cao cấp</a>
+                    <a href="#div2">Cách pha trà Shan Tuyết</a>
+                    <a href="#div3">Các loại trà shan tuyết trên thị trường</a>
+                    <a href="#div4">5 vùng trà Shan Tuyết ở Việt Nam</a>
+                    <a href="#div5">Mua Trà Bancha Shan Tuyết ở Bancha.vn</a>
                 </div>
             </div>
 
@@ -353,17 +71,18 @@
 
     <section class="d-flex flex-wrap container mt-50 align-items-start mb-60">
         <nav class="sidebar">
-            <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
-            <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
-            <a href="#">Cách làm và cách pha trà Bancha</a>
-            <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
-            <a href="#">Trà bancha gạo lứt</a>
-            <a href="#">Trà bancha Shan Tuyết</a>
+            <a href="index.html#top-div">Tất cả những gì bạn cần biết về Trà Bancha</a>
+            <a href="tra-bancha-va-tuong-tamari.html#top-div">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+            <a href="cach-lam-va-cach-pha-tra-bancha.html#top-div">Cách làm và cách pha trà Bancha</a>
+            <a href="cach-pha-tra-bancha-theo-cong-thuc-thay-tue-hai.html#top-div">Cách pha trà Bancha theo công thức Thầy Tuệ
+                Hải</a>
+            <a href="tra-bancha-gao-lut.html#top-div">Trà bancha gạo lứt</a>
+            <a href="tra-bancha-shan-tuyet.html#top-div" class="active">Trà bancha Shan Tuyết</a>
         </nav>
-        <div class="pl-60 pr-60 content">
+        <div class="pl-60 pr-60 content" id="top-div">
             <h1>Trà Bancha Shan Tuyết - bancha.vn</h1>
-            <h2>Giới thiệu về Trà shan tuyết cao cấp</h2>
-            <h3>Trà shan tuyết là gì</h3>
+            <h2 id="div1">I. Giới thiệu về Trà shan tuyết cao cấp</h2>
+            <h3>1. Trà shan tuyết là gì</h3>
             <p>Chè Shan tuyết là loại chè đặc biệt ngon, có mùi thơm dịu, vị ngọt thanh. Nó trông có màu vàng trong cốc
                 và được yêu thích bởi những người thực sự biết và đánh giá cao trà.</p>
             <p>Trà Shan Tuyết là một loại trà đặc biệt có nguồn gốc từ các tỉnh phía Bắc, Việt Nam. Trà Shan Tuyết có vị
@@ -373,7 +92,7 @@
                 và gầy. Điều này làm cho trà có hương vị đặc biệt và ngon.</p>
             <p>Trà Shan Tuyết được làm theo cách đặc biệt bằng các phương pháp cũ như khuấy, để yên và sấy khô cẩn thận.
                 Điều này giúp trà giữ được hương vị thơm ngon, màu sắc đẹp và chất lượng cao.</p>
-            <h3>Công dụng khi kết hợp với trà bancha shan tuyết</h3>
+            <h3>2. Công dụng khi kết hợp với trà bancha shan tuyết</h3>
             <p><b>Kết hợp trà bancha shan tuyết với tương tamari hoặc miso có thể mang lại những lợi ích và công dụng
                     sau:</b></p>
             <ul>
@@ -401,7 +120,7 @@
             <p><b>Lưu ý:</b> Khi kết hợp trà bancha shan tuyết với tương tamari hoặc miso, hãy thử và điều chỉnh tỷ lệ
                 và mức
                 độ sử dụng sao cho phù hợp với khẩu vị và sở thích cá nhân.</p>
-            <h3>Trà Shan Tuyết Cổ Thụ</h3>
+            <h3>3. Trà Shan Tuyết Cổ Thụ</h3>
             <p>Những cây chè Shan Tuyết được coi là cổ thụ có lịch sử phát triển lâu đời trên vùng đất này, kéo dài hơn
                 một thế kỷ và thường trên 100 năm tuổi.</p>
             <p>Chè Shan Tuyết Cổ Thụ nổi tiếng với hương vị độc đáo và chất lượng tuyệt hảo, có được là nhờ những lá chè
@@ -418,7 +137,7 @@
                 đam mê chè cũng như các chuyên gia đánh giá cao. Thưởng thức một tách trà này cũng là cơ hội để tìm hiểu
                 sâu hơn về văn hóa trà độc đáo của vùng núi cao Việt Nam, tạo nên một trải nghiệm uống trà thực sự đặc
                 biệt.</p>
-            <h2>Cách pha trà Shan Tuyết</h2>
+            <h2 id="div2">II. Cách pha trà Shan Tuyết</h2>
             <p><b>Chuẩn bị nguyên liệu:</b></p>
             <ul>
                 <li>Trà Shan Tuyết: 1-2 muỗng trà cho mỗi ly.</li>
@@ -444,7 +163,7 @@
             <p><b>Lưu ý:</b> Khi pha chè Shan tuyết, dùng nước quá nóng có thể làm chè mất đi phần nào vị ngon. Vì vậy,
                 điều
                 quan trọng là sử dụng nước có nhiệt độ phù hợp để trà có hương vị ngon nhất!</p>
-            <h2>Các loại trà shan tuyết trên thị trường</h2>
+            <h2 id="div3">III. Các loại trà shan tuyết trên thị trường</h2>
 
             <p><b>Trên thị trường, có một số loại trà Shan Tuyết đặc biệt và phổ biến. Dưới đây là một số loại trà Shan
                     Tuyết được bán trên thị trường:</b></p>
@@ -474,17 +193,18 @@
                 có hại như rượu, thức ăn, độc tố và hóa chất. Hỗ trợ lọc máu, giảm mệt mỏi và căng thẳng đồng thời kích
                 thích tiêu hóa và thúc đẩy tính kiềm.</p>
 
-            <p><b>Trà Shan Tuyết Hương Hoa:</b> Là sự kết hợp giữa trà Shan Tuyết và các loại hoa như hoa cúc, hoa hồng,
+            <p><b>6. Trà Shan Tuyết Hương Hoa:</b> Là sự kết hợp giữa trà Shan Tuyết và các loại hoa như hoa cúc, hoa
+                hồng,
                 hoa nhài. Trà Shan Tuyết Hương Hoa có hương thơm đặc trưng và hòa quyện giữa vị trà và hương hoa.</p>
-            <h2>5 vùng trà Shan Tuyết ở Việt Nam</h2>
-            <h3>Trà Shan Tuyết Bản Liền, Lào Cai</h3>
+            <h2 id="div4">IV. 5 vùng trà Shan Tuyết ở Việt Nam</h2>
+            <h3>1. Trà Shan Tuyết Bản Liền, Lào Cai</h3>
             <p>Ẩn mình trong một vị trí đẹp như tranh vẽ ở độ cao khoảng 1.500m so với mực nước biển, Chè Bản Liền đã
                 được thành lập như một thiên đường cho hơn 400 hộ gia đình người Tày sản xuất chè Shan tuyết hảo hạng.
             </p>
             <p>Khí hậu thôn dã của Bản Liền, mát mẻ vĩnh viễn và thỉnh thoảng có sương mù dày đặc, tạo điều kiện hoàn
                 hảo cho việc trồng chè Shan tuyết phát triển mạnh mẽ mà không cần bất kỳ phân bón nhân tạo nào.</p>
 
-            <h3>Trà Shan Tuyết Suối Giàng, Yên Bái</h3>
+            <h3>2. Trà Shan Tuyết Suối Giàng, Yên Bái</h3>
             <p>Suối Giàng ở Yên Bái tự hào có loại chè Shan tuyết hảo hạng nhất nhì cả nước. Vùng chè này trải rộng trên
                 diện tích rộng lớn 400 ha, thể hiện quy mô canh tác chè ấn tượng. Những cây chè khoe thân rộng vài người
                 ôm, tán xanh mướt rộng hơn 20m2, điểm xuyết địa y mốc meo.</p>
@@ -495,25 +215,50 @@
                 kích thích tăng trưởng nào.</p>
 
             <p>Vì vậy, vùng này nổi tiếng là nơi sản xuất ra loại Trà Shan Tuyết Cổ Thụ tinh khiết nhất Việt Nam.</p>
-            <h3>Trà Shan Tuyết Tủa Chùa, Điện Biên</h3>
+            <h3>3. Trà Shan Tuyết Tủa Chùa, Điện Biên</h3>
             <p>Trà Shan Tuyết tại Tủa Chùa sinh trưởng tự nhiên, không cần chăm bón vẫn tự lên xanh tốt. Tự duy trì màu
                 xanh tươi tốt của mình, đã tồn tại qua nhiều thế kỷ, thích nghi với thổ nhưỡng và khí hậu địa phương để
                 vượt qua mọi thách thức môi trường và đẩy lùi sâu bệnh.</p>
             <p>Một lượng lớn trong số hơn, mỗi cây trên 300 tuổi. Được lựa chọn kỹ lưỡng từ những búp chè non còn ngậm
                 sương sớm và vẫn đọng một lớp mỏng tuyết trắng.</p>
 
-            <h3>Trà Shan Tuyết tại Tà Xùa, Sơn La</h3>
+            <h3>4. Trà Shan Tuyết tại Tà Xùa, Sơn La</h3>
             <p>Tà Xùa thường được ví như “cánh cổng trời” bởi sự hòa quyện tinh tế giữa đất trời và mây mù bao phủ. Độ
                 cao tối ưu và khí hậu ôn hòa nhất quán khiến nơi đây trở thành môi trường hoàn hảo để trồng và nuôi
                 dưỡng chè Shan tuyết.</p>
 
-            <h3>Trà Shan Tuyết Hà Giang</h3>
+            <h3>5. Trà Shan Tuyết Hà Giang</h3>
             <p>Thưởng thức loại chè Shan Tuyết quý hiếm, mọc tự nhiên trong môi trường nguyên sơ không có bất kỳ tác
                 nhân nhân tạo nào. Vùng đất Hà Giang có những cây chè trăm tuổi, trong đó có những cây chè cổ thụ hoang
                 dã hơn 900 năm tuổi, cho ra hương vị độc đáo và tinh tế.</p>
 
             <p>Với hương vị riêng biệt và đậm đà, Trà Shan tuyết nơi này chắc chắn sẽ làm hài lòng các giác quan của bạn
                 và mang đến trải nghiệm sảng khoái và ổn định sau nhiều nước.</p>
+
+            <h2 id="div5">V. Mua Trà Bancha Shan Tuyết ở Bancha.vn</h2>
+            <p>Bancha.vn tự hào là thương hiệu trà Bancha thượng hạng nổi tiếng tại Việt Nam, chuyên phục vụ khẩu vị
+                sành điệu của những người sành trà với dòng sản phẩm trà Bancha Shan Tuyết hảo hạng.</p>
+
+            <p>Với mong muốn mang đến cho khách hàng những trải nghiệm thưởng trà đích thực và tuyệt vời, Bancha.vn đã
+                nổi lên như một cái tên đáng tin cậy đối với những người sành trà cao cấp. Bancha.vn tận dụng nguồn tài
+                nguyên trà phong phú của vùng Bancha thuần khiết, nơi có thời tiết và cảnh quan hài hòa giúp cây trà
+                phát triển tối ưu.</p>
+
+            <p>Với sự chăm sóc tỉ mỉ và chế biến tinh tế, trà Shan tuyết của Bancha.vn mang hương vị đặc trưng và giá
+                trị dinh dưỡng vượt trội. Bancha.vn chuyên cung cấp chè Bancha Shan Tuyết hảo hạng với quy trình thu
+                hoạch và chế biến đạt tiêu chuẩn hoàn hảo. Sự tận tâm của chúng tôi nằm trong việc bảo tồn các thành
+                phần tự nhiên của lá trà, tạo nên hương vị tinh tế, thuần khiết và tốt cho sức khỏe.</p>
+
+            <p>Trang web bancha.vn mang đến trải nghiệm mua sắm trực tuyến tinh vi và liền mạch, cho phép khách hàng dễ
+                dàng tìm hiểu và đặt mua loại trà Bancha Shan Tuyết ưa thích của mình. Ngoài ra, bancha.vn còn cung cấp
+                thông tin chi tiết toàn diện về nguồn gốc và quy trình chế biến chè, giúp khách hàng hiểu rõ hơn về sản
+                phẩm mà mình đang mua.</p>
+
+            <p>Bancha.vn là sự lựa chọn hoàn hảo cho những người đam mê trà, coi trọng sự xuất sắc và tỉ mỉ, bởi sự nhấn
+                mạnh không ngừng của chúng tôi vào việc cung cấp chất lượng và độ tin cậy vượt trội giúp chúng tôi nổi
+                bật như một thương hiệu đáng tin cậy và được kính trọng trong thế giới chè Bancha Shan Tuyết.</p>
+
+            <a href="#" class="link-btn">Liên hệ đặt hàng ngay Trà Bancha Shan tuyết - Bancha.vn</a>
 
 
 
@@ -522,11 +267,14 @@
             <nav class="mb-30">
                 <p><b>Mục Lục Bài Viết</b></p>
                 <div class="content-menu-items">
-                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
-                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                    <a href="#div1" class="active">Giới thiệu về Trà shan tuyết cao cấp</a>
+                    <a href="#div2">Cách pha trà Shan Tuyết</a>
+                    <a href="#div3">Các loại trà shan tuyết trên thị trường</a>
+                    <a href="#div4">5 vùng trà Shan Tuyết ở Việt Nam</a>
+                    <a href="#div5">Mua Trà Bancha Shan Tuyết ở Bancha.vn</a>
                 </div>
             </nav>
-            <a href="#" class="ad"><img src="img/mua-bancha-o-dau-tot.jpg" class="w-100"></a>
+            <a href="index.html#mua-bancha" class="ad"><img src="img/mua-bancha-o-dau-tot.jpg" class="w-100"></a>
         </div>
     </section>
 
@@ -535,8 +283,8 @@
             <img src="img/bancha-logo.svg">
             <p class="mt-0">bancha.vn - Cẩm nang kiến thức chuyên sâu về trà bancha</p>
             <div>
-                <a href="#"><img src="img/bancha-facebook.svg"></a>
-                <a href="#"><img src="img/bancha-group.svg"></a>
+                <a href="https://www.facebook.com/bancha.vn" target="_blank"><img src="img/bancha-facebook.svg"></a>
+                <a href="https://www.facebook.com/bancha.vn" target="_blank"><img src="img/bancha-group.svg"></a>
             </div>
         </div>
         <p>©bancha.vn 2023</p>
@@ -544,44 +292,8 @@
     <button id="toTop"><img src="img/back-to-top.svg"></button>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(document).scrollTop() > 50) {
-                    $("#menus").addClass("darkHeader");
-                } else {
-                    $("#menus").removeClass("darkHeader");
-                }
-            });
-        });
-        $(document).ready(function () {
-
-            //Check to see if the window is top if not then display button
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('#toTop').fadeIn();
-                } else {
-                    $('#toTop').fadeOut();
-                }
-            });
-
-            //Click event to scroll to top
-            $('#toTop').click(function () {
-                $('html, body').animate({ scrollTop: 0 }, 200);
-                return false;
-            });
-
-        });
-
-        var contentMenuItems = document.querySelectorAll(".content-menu-items a");
-        var ifTrue = document.querySelectorAll(".content-menu-items a.active");
-        contentMenuItems.forEach(function (course, index, array) {
-            course.onclick = function () {
-                course.classList.add("active");
-            }
-        })
-    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

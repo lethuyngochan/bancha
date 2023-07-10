@@ -5,296 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tất cả những gì bạn cần biết về Trà Bancha</title>
+    <title>Cách pha trà Bancha theo công thức thầy Tuệ Hải</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.svg">
     <meta property="og:image" content="img/share.jpg">
-    <style>
-        @font-face {
-            font-family: Allison;
-            src: url(fonts/Allison-Regular.ttf);
-        }
-
-        header {
-            color: white;
-            background: url(img/bancha-banner.jpg) center;
-            background-size: cover;
-            text-shadow: 0px 0px 70px black;
-            z-index: 1;
-        }
-
-        header a {
-            padding: 0 30px;
-        }
-
-        body {
-            line-height: 1.5;
-            margin: 0;
-            background: #F6F5F3;
-            color: #3F3130;
-        }
-
-        .uppercase {
-            text-transform: uppercase;
-        }
-
-        a {
-            color: white;
-            text-decoration: none;
-        }
-
-        .font-96 {
-            font-size: 250px;
-            line-height: 0.7;
-            font-family: Allison;
-        }
-
-        .mb-0 {
-            margin-bottom: 0;
-        }
-
-        .mb-30 {
-            margin-bottom: 30px;
-        }
-
-        .container {
-            max-width: 1300px;
-            margin: auto;
-        }
-
-        .pt-30 {
-            padding-top: 30px;
-        }
-
-        .pr-15 {
-            padding-right: 15px;
-        }
-
-        .pr-30 {
-            padding-right: 30px;
-        }
-
-        .pr-60 {
-            padding-right: 60px;
-        }
-
-        .pb-15 {
-            padding-bottom: 15px;
-        }
-
-        .pb-100 {
-            padding-bottom: 100px;
-        }
-
-        .pl-15 {
-            padding-left: 15px;
-        }
-
-        .pl-30 {
-            padding-left: 30px;
-        }
-
-        .text-center {
-            text-align: center;
-        }
-
-        .d-flex {
-            display: flex;
-        }
-
-        .justify-center {
-            justify-content: center;
-        }
-
-        .text-right {
-            text-align: right;
-        }
-
-        .d-inline-block {
-            display: inline-block;
-        }
-
-        a:hover {
-            opacity: 0.8;
-            transition: 0.5s;
-        }
-
-        .categories {
-            min-width: 1000px;
-        }
-
-        .categories a {
-            width: 12.4%;
-            height: 130px;
-            display: inline-block;
-            margin: 0.05%;
-        }
-
-        .align-items-end {
-            align-items: flex-end;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .flex-wrap {
-            flex-wrap: wrap;
-        }
-
-        .category {
-            height: 100%;
-        }
-
-        .category p {
-            background-image: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(0, 0, 0, 0.5));
-            height: 100%;
-            margin: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        .overlay {
-            height: 100%;
-            width: 100%;
-            display: none;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: rgb(0, 0, 0);
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: scroll;
-        }
-
-        .overlay-content {
-            position: relative;
-            top: 10px;
-            width: 100%;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .overlay a {
-            padding: 8px;
-            text-decoration: none;
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
-
-        .overlay a:hover,
-        .overlay a:focus {
-            color: #f1f1f1;
-        }
-
-        .overlay .closebtn {
-            position: absolute;
-            top: 7px;
-            font-size: 40px;
-            line-height: 0.5;
-        }
-
-        .mobile-menu {
-            display: none;
-        }
-
-        .justify-between {
-            justify-content: space-between;
-        }
-
-        .uppercase .overlay-content a span a {
-            text-transform: none;
-        }
-
-        .submenu-img {
-            width: 18px;
-        }
-
-        header .justify-between {
-            padding: 0 15px;
-        }
-
-        #mainNav .closebtn {
-            left: 8px;
-        }
-
-        #subNav .closebtn {
-            right: 4px;
-        }
-
-        .overflow-scroll {
-            overflow: scroll;
-        }
-
-        .align-items-center {
-            align-items: center;
-        }
-
-        @media screen and (max-height: 450px) {
-            .overlay a {
-                font-size: 20px
-            }
-
-            .overlay .closebtn {
-                font-size: 40px;
-                top: 15px;
-                right: 35px;
-            }
-        }
-
-        @media screen and (max-width:992px) {
-            .font-96 {
-                font-size: 70px;
-            }
-
-            .pb-100 {
-                padding-bottom: 60px;
-            }
-        }
-
-        @media screen and (max-width:767px) {
-            .mobile-menu {
-                display: block;
-            }
-
-            header.pt-30 {
-                padding-top: 0;
-            }
-
-            header .justify-between {
-                position: fixed;
-                width: 100%;
-            }
-
-            header .justify-center {
-                padding-top: 60px;
-            }
-
-            .darkHeader {
-                background: black;
-            }
-
-            .font-96 {
-                font-size: 80px;
-            }
-
-            .logo {
-                width: 90px;
-            }
-
-            .pb-100 {
-                padding-bottom: 40px;
-            }
-
-            .content h1 {
-                font-size: 28px;
-            }
-        }
-
-        @media screen and (max-width:600px) {}
-    </style>
+    <link rel="stylesheet" href="css/top.css">
 </head>
 
 <body>
@@ -310,19 +24,22 @@
             <div id="mainNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <div class="overlay-content pb-15">
-                    <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
-                    <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
-                    <a href="#">Cách làm và cách pha trà Bancha</a>
-                    <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
-                    <a href="#">Trà bancha gạo lứt</a>
-                    <a href="#">Trà bancha Shan Tuyết</a>
+                    <a href="index.html">Tất cả những gì bạn cần biết về Trà Bancha</a>
+                    <a href="tra-bancha-va-tuong-tamari.html">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+                    <a href="cach-lam-va-cach-pha-tra-bancha.html">Cách làm và cách pha trà Bancha</a>
+                    <a href="cach-pha-tra-bancha-theo-cong-thuc-thay-tue-hai.html">Cách pha trà Bancha theo công thức
+                        Thầy Tuệ Hải</a>
+                    <a href="tra-bancha-gao-lut.html">Trà bancha gạo lứt</a>
+                    <a href="tra-bancha-shan-tuyet.html">Trà bancha Shan Tuyết</a>
                 </div>
             </div>
             <div id="subNav" class="overlay">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeSubNav()">&times;</a>
                 <div class="overlay-content pb-15">
-                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
-                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                    <a href="#div1">Giới thiệu về Trà bancha Thầy Thích Tuệ Hải</a>
+                    <a href="#div2">Mẹo nhỏ để pha trà Bancha Thầy Thích Tuệ Hải ngon như ý</a>
+                    <a href="#div3">Thực dưỡng với trà bancha cùng Thầy Thích Tuệ Hải</a>
+                    <a href="#div4">Trà Bình Minh Theo Công Thức Thầy Tuệ Hải</a>
                 </div>
             </div>
 
@@ -353,32 +70,33 @@
 
     <section class="d-flex flex-wrap container mt-50 align-items-start mb-60">
         <nav class="sidebar">
-            <a href="#" class="active">Tất cả những gì bạn cần biết về Trà Bancha</a>
-            <a href="#">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
-            <a href="#">Cách làm và cách pha trà Bancha</a>
-            <a href="#">Cách pha trà Bancha theo công thức Thầy Tuệ Hải</a>
-            <a href="#">Trà bancha gạo lứt</a>
-            <a href="#">Trà bancha Shan Tuyết</a>
+            <a href="index.html#top-div">Tất cả những gì bạn cần biết về Trà Bancha</a>
+            <a href="tra-bancha-va-tuong-tamari.html#top-div">Trà Bancha và Tương Tamari - “Shō-Ban”</a>
+            <a href="cach-lam-va-cach-pha-tra-bancha.html#top-div">Cách làm và cách pha trà Bancha</a>
+            <a href="cach-pha-tra-bancha-theo-cong-thuc-thay-tue-hai.html#top-div" class="active">Cách pha trà Bancha theo công thức Thầy Tuệ
+                Hải</a>
+            <a href="tra-bancha-gao-lut.html#top-div">Trà bancha gạo lứt</a>
+            <a href="tra-bancha-shan-tuyet.html#top-div">Trà bancha Shan Tuyết</a>
         </nav>
-        <div class="pl-60 pr-60 content">
+        <div class="pl-60 pr-60 content" id="top-div">
             <h1>Cách pha trà Bancha theo công thức thầy Tuệ Hải</h1>
             <p><b>Trà Bancha là một loại trà nổi tiếng với hương vị thơm ngon và tinh túy. Để có thể thưởng thức một ly
                     trà Bancha hoàn hảo, việc lựa chọn nguyên liệu và pha trà với tỷ lệ hợp lý là rất quan trọng. Trong
                     bài viết này, chúng ta sẽ tìm hiểu về cách lựa chọn nguyên liệu và tỷ lệ pha Trà Bancha theo công
                     thức Thầy Thích Tuệ Hải.</b></p>
-            <h2>Giới thiệu về Trà bancha Thầy Thích Tuệ Hải</h2>
-            <h3>Lựa chọn nguyên liệu Trà Bancha</h3>
+            <h2 id="div1">I. Giới thiệu về Trà bancha Thầy Thích Tuệ Hải</h2>
+            <h3>1. Lựa chọn nguyên liệu Trà Bancha</h3>
             <p>Để có một ly trà Bancha thơm ngon, chúng ta cần lựa chọn nguyên liệu chất lượng. Trà Bancha Thầy Thích
                 Tuệ Hải thường được làm từ các loại lá trà tươi ngon, như trà xanh, trà đen, hoặc trà búp sen. Lá trà
                 cần được thu hái trong thời gian tốt nhất, khi chúng mới mọc và chưa có quá nhiều sự biến đổi hóa học.
                 Lá trà tươi sẽ mang lại hương vị và mùi thơm tốt nhất cho trà Bancha.</p>
-            <h3>Tỉ lệ pha Trà Bancha</h3>
+            <h3>2. Tỉ lệ pha Trà Bancha</h3>
             <p>Tỉ lệ pha trà là yếu tố quyết định đến hương vị và mức độ đậm đà của trà Bancha Thầy Thích Tuệ Hải. Để có
                 một ly trà hoàn hảo, chúng ta cần tuân thủ tỉ lệ pha chính xác. Thông thường, tỷ lệ pha trà Bancha là
                 2-3 gram trà cho mỗi 150ml nước. Tuy nhiên, tỷ lệ này có thể được điều chỉnh tùy thuộc vào sở thích cá
                 nhân về độ đậm đà của trà. Nếu bạn thích trà đậm đà hơn, có thể tăng lượng trà lên 3-4 gram cho mỗi
                 150ml nước.</p>
-            <h3>Cách pha trà Bancha Thầy Tuệ Hải</h3>
+            <h3>3. Cách pha trà Bancha Thầy Tuệ Hải</h3>
             <p>Sau khi đã chọn nguyên liệu và tỷ lệ pha, ta cần pha trà Bancha theo các bước sau:</p>
             <p><b>Bước 1:</b> Đun nước sôi, đợi nước có nhiệt độ khoảng 80-85 độ C. Lưu ý không đun nước quá sôi, vì
                 nước quá nóng có thể làm hỏng hương vị của trà.</p>
@@ -387,7 +105,7 @@
                 hòa quyện với nước.</p>
             <p><b>Bước 4:</b> Lắc nhẹ ấm trà hoặc tách trà để tách trà rơi xuống đáy và lọc bỏ phần bã trà.</p>
             <p><b>Bước 5:</b> Đổ từ từ trà từ ấm trà hoặc tách trà ra các ly trà đã được chuẩn bị trước đó.</p>
-            <h2>Mẹo nhỏ để pha trà Bancha Thầy Thích Tuệ Hải ngon như ý</h2>
+            <h2 id="div2">II. Mẹo nhỏ để pha trà Bancha Thầy Thích Tuệ Hải ngon như ý</h2>
             <p>Chúng ta có thể thêm một chút đường hoặc mật ong vào trà để làm dịu hương vị đắng của trà.</p>
             <p>Để đảm bảo trà có hương vị tốt nhất, nên sử dụng nước khoáng hoặc nước đã lọc thay vì nước vôi hoặc nước
                 có chất lượng không tốt.</p>
@@ -402,30 +120,35 @@
                 nắm bắt nghệ thuật pha trà và làm theo lời khuyên của chuyên gia, người ta có thể đảm bảo hương vị hoàn
                 hảo của trà Bancha. Chúng tôi khuyến khích bạn thực hiện những gợi ý nói trên và thưởng thức một tách
                 trà Bancha thú vị.</p>
-            <h2>Thực dưỡng với trà bancha cùng Thầy Thích Tuệ Hải</h2>
+            <h2 id="div3">III. Thực dưỡng với trà bancha cùng Thầy Thích Tuệ Hải</h2>
             <p>Thực dưỡng đã trở thành một phương pháp sống lành mạnh và cân bằng ngày nay, và trà BanCha là một phần
                 quan trọng của phong cách sống thực dưỡng. Nội dung tiếp theo, chúng ta sẽ tìm hiểu về thực dưỡng với
                 trà BanCha cùng Thầy Thích Tuệ Hải và những lợi ích sức khỏe mà nó mang lại.</p>
-            <h3>Giới thiệu về trà Bancha</h3>
+            <h3>1. Giới thiệu về trà Bancha</h3>
             <p>Trà BanCha là một loại trà được trồng và chế biến theo phương pháp truyền thống ở Nhật Bản. BanCha có
                 nguồn gốc từ cây chè trà Camellia sinensis, tuy nhiên, nó khác biệt với các loại trà khác như SenCha hay
                 Matcha. BanCha được thu hoạch từ lá chè già, có hương vị độc đáo và dinh dưỡng phong phú.</p>
-            <h3>Thực dưỡng và sự kết hợp cùng trà BanCha</h3>
+            <h3>2. Thực dưỡng và sự kết hợp cùng trà BanCha</h3>
             <p>Trà BanCha được coi là một phần quan trọng trong thực dưỡng với nhiều lợi ích sức khỏe. Thầy Thích Tuệ
                 Hải, một giảng viên và nhà nghiên cứu về thực dưỡng, khuyến khích việc sử dụng trà BanCha như một phần
                 quan trọng trong chế độ ăn uống hàng ngày.</p>
-            <h3>Các lợi ích sức khỏe của trà BanCha</h3>
-            <p><b>Tốt cho tim mạch:</b> Trà BanCha có chứa các chất chống oxy hóa, giúp giảm nguy cơ mắc các bệnh tim mạch và
+            <h3>3. Các lợi ích sức khỏe của trà BanCha</h3>
+            <p><b>Tốt cho tim mạch:</b> Trà BanCha có chứa các chất chống oxy hóa, giúp giảm nguy cơ mắc các bệnh tim
+                mạch và
                 huyết áp cao.</p>
-            <p><b>Tăng cường hệ miễn dịch:</b> Trà BanCha chứa các chất chống vi khuẩn tự nhiên, giúp tăng cường hệ miễn dịch
+            <p><b>Tăng cường hệ miễn dịch:</b> Trà BanCha chứa các chất chống vi khuẩn tự nhiên, giúp tăng cường hệ miễn
+                dịch
                 và ngăn ngừa bệnh tật.</p>
-            <p><b>Giảm căng thẳng và tăng cường tập trung:</b> Trà BanCha có chứa các chất chống căng thẳng và tăng cường tập
+            <p><b>Giảm căng thẳng và tăng cường tập trung:</b> Trà BanCha có chứa các chất chống căng thẳng và tăng
+                cường tập
                 trung, giúp giảm căng thẳng và cải thiện tinh thần.</p>
-            <p><b>Tốt cho tiêu hóa:</b> Trà BanCha có khả năng hỗ trợ tiêu hóa, giảm các vấn đề về tiêu hóa như đầy hơi, buồn
+            <p><b>Tốt cho tiêu hóa:</b> Trà BanCha có khả năng hỗ trợ tiêu hóa, giảm các vấn đề về tiêu hóa như đầy hơi,
+                buồn
                 nôn và tiêu chảy.</p>
-            <p><b>Chống oxi hóa:</b> Trà BanCha chứa các chất chống oxi hóa mạnh, giúp ngăn chặn tác động của các gốc tự do
+            <p><b>Chống oxi hóa:</b> Trà BanCha chứa các chất chống oxi hóa mạnh, giúp ngăn chặn tác động của các gốc tự
+                do
                 trong cơ thể và giữ gìn sự trẻ trung.</p>
-            <h3>Lưu ý khi sử dụng trà BanCha</h3>
+            <h3>4. Lưu ý khi sử dụng trà BanCha</h3>
             <p>Tránh sử dụng quá nhiều: Mặc dù trà BanCha có nhiều lợi ích sức khỏe, nhưng cũng cần sử dụng một cách hợp
                 lý. Hãy uống trà BanCha một cách điều độ để tránh tác động tiêu cực đến sức khỏe.</p>
             <p>Kiểm tra sự tương thích: Nếu bạn có bất kỳ vấn đề sức khỏe nào, hãy tham khảo ý kiến của bác sĩ hoặc
@@ -434,7 +157,7 @@
                 thực dưỡng. Hãy áp dụng trà BanCha vào chế độ ăn uống hàng ngày của bạn để tận hưởng những lợi ích tuyệt
                 vời mà nó mang lại. Tuy nhiên, hãy nhớ sử dụng trà BanCha một cách hợp lý và điều độ để đảm bảo sức khỏe
                 tốt nhất.</p>
-            <h2>Trà Bình Minh Theo Công Thức Thầy Tuệ Hải</h2>
+            <h2 id="div4">IV. Trà Bình Minh Theo Công Thức Thầy Tuệ Hải</h2>
             <p>Trà Bình Minh và bài thuốc cảm là những phương pháp dưỡng sinh hữu ích để giúp chống cảm lạnh và tăng
                 cường sức đề kháng. Trà Bình Minh cũng cung cấp một loạt các món ăn phong phú cho dưỡng sinh hàng ngày.
                 Trong sổ tay dưỡng sinh, có hướng dẫn cách pha chế trà và bài thuốc cảm.</p>
@@ -456,11 +179,13 @@
             <nav class="mb-30">
                 <p><b>Mục Lục Bài Viết</b></p>
                 <div class="content-menu-items">
-                    <a href="#div1" class="active">Giới thiệu về Trà Bancha</a>
-                    <a href="#div2">Phương pháp dưỡng sinh Oshawa kết hợp với trà bancha</a>
+                    <a href="#div1" class="active">Giới thiệu về Trà bancha Thầy Thích Tuệ Hải</a>
+                    <a href="#div2">Mẹo nhỏ để pha trà Bancha Thầy Thích Tuệ Hải ngon như ý</a>
+                    <a href="#div3">Thực dưỡng với trà bancha cùng Thầy Thích Tuệ Hải</a>
+                    <a href="#div4">Trà Bình Minh Theo Công Thức Thầy Tuệ Hải</a>
                 </div>
             </nav>
-            <a href="#" class="ad"><img src="img/mua-bancha-o-dau-tot.jpg" class="w-100"></a>
+            <a href="index.html#mua-bancha" class="ad"><img src="img/mua-bancha-o-dau-tot.jpg" class="w-100"></a>
         </div>
     </section>
 
@@ -469,8 +194,8 @@
             <img src="img/bancha-logo.svg">
             <p class="mt-0">bancha.vn - Cẩm nang kiến thức chuyên sâu về trà bancha</p>
             <div>
-                <a href="#"><img src="img/bancha-facebook.svg"></a>
-                <a href="#"><img src="img/bancha-group.svg"></a>
+                <a href="https://www.facebook.com/bancha.vn" target="_blank"><img src="img/bancha-facebook.svg"></a>
+                <a href="https://www.facebook.com/bancha.vn" target="_blank"><img src="img/bancha-group.svg"></a>
             </div>
         </div>
         <p>©bancha.vn 2023</p>
@@ -478,44 +203,8 @@
     <button id="toTop"><img src="img/back-to-top.svg"></button>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(window).scroll(function () {
-                if ($(document).scrollTop() > 50) {
-                    $("#menus").addClass("darkHeader");
-                } else {
-                    $("#menus").removeClass("darkHeader");
-                }
-            });
-        });
-        $(document).ready(function () {
-
-            //Check to see if the window is top if not then display button
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > 100) {
-                    $('#toTop').fadeIn();
-                } else {
-                    $('#toTop').fadeOut();
-                }
-            });
-
-            //Click event to scroll to top
-            $('#toTop').click(function () {
-                $('html, body').animate({ scrollTop: 0 }, 200);
-                return false;
-            });
-
-        });
-
-        var contentMenuItems = document.querySelectorAll(".content-menu-items a");
-        var ifTrue = document.querySelectorAll(".content-menu-items a.active");
-        contentMenuItems.forEach(function (course, index, array) {
-            course.onclick = function () {
-                course.classList.add("active");
-            }
-        })
-    </script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
