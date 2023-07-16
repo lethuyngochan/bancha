@@ -126,8 +126,8 @@ footer {
 
 #toTop {
     position: fixed;
-    bottom: 0;
-    right: 20px;
+    bottom: 20px;
+    left: 10px;
     display: none;
     background: transparent;
     border: none;
@@ -160,6 +160,51 @@ footer {
     border-bottom: 4px solid transparent;
     content: '';
     margin: 0 0 0 20px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    transition: 0.5s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.pos-fixed {
+    position: fixed;
+}
+
+#contact {
+    right: 10px;
+    bottom: 30px;
+}
+
+#zalo-mess {
+    right: 10px;
+    bottom: 90px;
+    display: none;
+}
+
+.show {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    animation-name: slideIn;
+    animation-duration: 0.5s;
+}
+
+@keyframes slideIn {
+    from {
+        bottom: 70px;
+        opacity: 0;
+    }
+
+    to {
+        bottom: 90px;
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width:992px) {

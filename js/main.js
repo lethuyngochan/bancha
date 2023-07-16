@@ -84,3 +84,10 @@ for (var i = 0; i < closeMainModalLinks.length; i++) {
         mainModal.style.display = 'none';
     });
 }
+
+// show zalo and messenger onclick phone
+var contact = document.getElementById('contact');
+var zaloMess = document.getElementById('zalo-mess')
+contact.onclick = function() {
+    zaloMess.classList.toggle("show");
+}
