@@ -207,6 +207,10 @@ button:hover {
     }
 }
 
+.brown {
+    color: #815F42;
+}
+
 @media screen and (max-width:992px) {
     .pl-60 {
         padding-left: 40px;
