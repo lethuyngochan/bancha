@@ -211,6 +211,19 @@ button:hover {
     color: #815F42;
 }
 
+.max-width-100 {
+    max-width: 100px;
+}
+
+.max-width-600 {
+    max-width: 600px;
+}
+
+.m-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @media screen and (max-width:992px) {
     .pl-60 {
         padding-left: 40px;
