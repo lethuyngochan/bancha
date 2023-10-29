@@ -225,6 +225,12 @@ header .justify-between {
     align-items: center;
 }
 
+.primary-btn {
+    background: #ee4d2d;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
@@ -275,6 +281,7 @@ header .justify-between {
 
     .logo {
         width: 90px;
+        vertical-align: middle;
     }
 
     .pb-100 {
@@ -283,6 +290,19 @@ header .justify-between {
 
     .content h1 {
         font-size: 28px;
+    }
+
+    .primary-btn {
+        padding: 5px 15px;
+        margin: 0 15px 0 0;
+    }
+
+    header a {
+        padding: 0 15px;
+    }
+
+    header .justify-between {
+        padding: 10px 15px;
     }
 }
 
