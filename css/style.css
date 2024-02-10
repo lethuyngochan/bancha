@@ -211,6 +211,10 @@ button:hover {
     color: #815F42;
 }
 
+.max-width-30 {
+    max-width: 30px;
+}
+
 .max-width-100 {
     max-width: 100px;
 }
@@ -222,6 +226,18 @@ button:hover {
 .m-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+footer a {
+    color: #6F6D65;
+}
+
+footer a:hover {
+    color: #815F42;
+}
+
+.mr-15 {
+    margin-right: 15px;
 }
 
 @media screen and (max-width:992px) {
@@ -263,5 +279,16 @@ button:hover {
         width: 100%;
         position: relative;
         top: 10px;
+    }
+
+    .content.pr-15.mt-50 {
+        margin-top: 80px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    footer .d-flex.container {
+        flex-direction: column;
+        padding: 0 0 30px;
     }
 }

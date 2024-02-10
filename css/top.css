@@ -231,6 +231,14 @@ header .justify-between {
     border-radius: 5px;
 }
 
+.no-bg {
+    background: none;
+}
+
+.logo {
+    width: 150px;
+}
+
 @media screen and (max-height: 450px) {
     .overlay a {
         font-size: 20px
@@ -265,6 +273,7 @@ header .justify-between {
     header .justify-between {
         position: fixed;
         width: 100%;
+        top: 0;
     }
 
     header .justify-center {
