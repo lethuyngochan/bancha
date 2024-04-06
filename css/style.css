@@ -63,16 +63,16 @@ h3 {
     padding-top: 30px;
 }
 
+.pt-60 {
+    padding-top: 60px;
+}
+
 .content {
     width: 50%;
 }
 
 .w-100 {
     width: 100%;
-}
-
-footer {
-    text-align: center;
 }
 
 .align-items-start {
@@ -283,6 +283,23 @@ footer a:hover {
 
     .content.pr-15.mt-50 {
         margin-top: 80px;
+    }
+
+    footer .d-flex.container {
+        flex-direction: column;
+        padding: 0px 0px 30px;
+    }
+
+    footer .pl-30 {
+        padding-left: 0;
+    }
+
+    footer .pr-30 {
+        padding-right: 0;
+    }
+
+    footer .pt-60 {
+        padding-top: 20px;
     }
 }
 
